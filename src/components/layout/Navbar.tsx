@@ -268,7 +268,7 @@ export const Navbar: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden px-3.5 py-1.5 rounded-md text-xs font-mono font-medium tracking-wider uppercase text-[#F3EBDD] border border-[#F3EBDD]/30 hover:bg-white/10 transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F3EBDD]"
+              className="md:hidden min-h-[44px] min-w-[56px] px-3.5 py-2 rounded-md text-xs font-mono font-medium tracking-wider uppercase text-[#F3EBDD] border border-[#F3EBDD]/30 hover:bg-white/10 transition-colors cursor-pointer inline-flex items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F3EBDD]"
               aria-label={isOpen ? "Close main navigation menu" : "Open main navigation menu"}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation-menu"

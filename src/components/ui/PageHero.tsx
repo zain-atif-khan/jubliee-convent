@@ -35,13 +35,13 @@ export const PageHero: React.FC<PageHeroProps> = ({
       <div className="container mx-auto px-5 sm:px-8 lg:px-12 max-w-7xl">
         <div className={cn("max-w-3xl", align === "center" ? "mx-auto text-center" : "text-left")}>
           {/* Strict: No eyebrow text above heading */}
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.15] mb-6">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.15] mb-6 break-words">
             {title}
           </h1>
-          <p className={cn("text-lg sm:text-xl font-normal leading-relaxed", textStyles[theme])}>
+          <p className={cn("text-base sm:text-lg md:text-xl font-normal leading-relaxed break-words", textStyles[theme])}>
             {description}
           </p>
-          {children && <div className="mt-8 flex flex-wrap gap-4">{children}</div>}
+          {children && <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">{children}</div>}
         </div>
       </div>
     </div>

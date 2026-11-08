@@ -54,11 +54,11 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
               onClick={() => toggleItem(index)}
               aria-expanded={isOpen}
               aria-controls={panelId}
-              className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="w-full text-left px-5 sm:px-6 py-4 sm:py-5 min-h-[48px] flex items-center justify-between gap-4 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               <span
                 className={cn(
-                  "font-serif text-lg sm:text-xl font-medium tracking-tight",
+                  "font-serif text-base sm:text-xl font-medium tracking-tight break-words",
                   isDark ? "text-[#F3EBDD]" : "text-[#171416]"
                 )}
               >
