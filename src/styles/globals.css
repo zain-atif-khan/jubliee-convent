@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-black: #171416;
+  --brand-coffee: #4A3028;
+  --brand-maroon: #4A3028;
+  --brand-cream: #F3EBDD;
+  --brand-beige: #D9C8B5;
+  --brand-surface-cream: #FAF6F0;
+  --brand-surface-black: #221D20;
+  --brand-border-cream: #E2D5C3;
+  --brand-border-coffee: #634137;
+  --brand-border-maroon: #634137;
+  --brand-border-black: #2D272B;
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+    color: var(--brand-black);
+    background-color: var(--brand-cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--brand-cream);
+    color: var(--brand-black);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Typography scale conforming strictly to agent.md */
+  h1, .font-h1 {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: clamp(2.25rem, 5vw, 4.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+
+  h2, .font-h2 {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    font-weight: 500;
+  }
+
+  h3, .font-h3 {
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  /* Strict focus visibility */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--brand-maroon);
+    outline-offset: 3px;
+  }
+}
+
+/* Reduced motion compliance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3EBDD;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9C8B5;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4A3028;
+}
+
+/* Mandatory Dark Black Glassmorphism for JUBLIE Floating Navbar */
+.dark-glass-pill {
+  -webkit-backdrop-filter: blur(var(--pill-blur, 0px)) saturate(var(--pill-saturate, 100%));
+  backdrop-filter: blur(var(--pill-blur, 0px)) saturate(var(--pill-saturate, 100%));
+}
